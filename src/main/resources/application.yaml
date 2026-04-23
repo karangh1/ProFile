@@ -1,0 +1,16 @@
+
+spring:
+  application:
+    name: proFile
+  datasource:
+    url: jdbc:postgresql://localhost:5432/proFile
+    username: postgres
+    password: karandb
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  secret: 12345678901234567890123456789012
+  expiration: 86400000
