@@ -5,12 +5,25 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/proFile
     username: postgres
-    password: karandb
+    password: ${DB_PASS}
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
 
+  ai:
+    openai:
+      api-key: ${GEMINI_KEY}
+      base-url: https://generativelanguage.googleapis.com/v1beta/openai
+      chat:
+        options:
+          model: gemini-2.5-flash
+
+
 jwt:
-  secret: 12345678901234567890123456789012
+  secret: ${JWT_SECRET}
   expiration: 86400000
+
+
+
+
